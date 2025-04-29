@@ -1,0 +1,14 @@
+---
+- name: Install package on any Linux system
+  hosts: all
+  become: yes
+  vars:
+    package_name: "htop"  # приклад; можна передати інше значення при запуску
+  roles:
+    - install_package
+
+- name: Update hostname on all hosts
+  hosts: all
+  become: yes
+  roles:
+    - set_hostname

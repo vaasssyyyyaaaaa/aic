@@ -1,0 +1,8 @@
+---
+- name: Change hostname
+  ansible.builtin.copy:
+    dest: /etc/hostname
+    content: "vasia-kohotiuk-lab2\n"
+    owner: root
+    group: root
+    mode: '0644'
